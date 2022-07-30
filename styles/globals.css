@@ -13,11 +13,15 @@ a {
 }
 
 * {
+  /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing */
   box-sizing: border-box;
 }
 
 .navtitle {
   font-family: 'Hammersmith One', sans-serif;
+}
+.titlemax {
+  font-family: 'Bangers', cursive;
 }
 
 @tailwind base;

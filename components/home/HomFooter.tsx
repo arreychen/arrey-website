@@ -1,13 +1,16 @@
+import {Footer} from '@adobe/react-spectrum';
+
 const HomeFooter = () =>{
   return (
-    <footer className='w-full  flex  justify-center items-center absolute bottom-0 gap-[0.5rem] text-titlcolor'>
-      <p className='py-7'>
-        <a href='https://beian.miit.gov.cn/' target='_blank' rel='noreferrer'>
+    <Footer >
+      <div className='w-full h-40 flex flex-col md:flex-row justify-center items-center  gap-[1rem] text-bordcolor font-bold select-none'>
+        <p>
+          <a href='https://beian.miit.gov.cn/' target='_blank' rel='noreferrer'>
             皖ICP备2021008083号
-        </a>
-      </p>
-      <p>&copy; 2022 ArreyChan, All rights reserved</p>
-    </footer>
+          </a>
+        </p>
+        <p >&copy; 2022 ArreyChan, All rights reserved</p></div>
+    </Footer>
   );
 };
 export default HomeFooter;
