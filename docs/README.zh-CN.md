@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/node-16.16.0-%23228b22?style=flat-square&logo=node.js" />
   <img src="https://img.shields.io/github/package-json/dependency-version/arreychan/arrey-website/next?color=f0ffff&logo=next.js&style=flat-square" />
    <img src="https://img.shields.io/github/package-json/dependency-version/arreychan/arrey-website/react?color=%231bbbe9&logo=react&style=flat-square" />
-   <img src="https://img.shields.io/badge/UI-react--spectrum-%23FF0000?logo=Adobe" />
+   <img src="https://img.shields.io/badge/UI-react--spectrum-%23FF0000?logo=Adobe&style=flat-square" />
  <img src="https://img.shields.io/github/license/arreychan/arrey-website?color=6770e5&style=flat-square" />
 </div>
 
