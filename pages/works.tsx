@@ -6,6 +6,7 @@ const Works: NextPage = () => {
       <Head>
         <title>(◍˃̶ᗜ˂̶◍)ﾉ ♡</title>
       </Head>
+      <div className="flex justify-center items-center navtitle text-bordcolor md:text-xl min-h-screen">The work is being compiled, so stay tuned!</div>
     </main>
   );
 };

@@ -5,9 +5,11 @@ module.exports = {
     extend: {
       colors: {
         // 靛蓝（浅）
-        'hover-navcolor': '#7d7ff5',
+        themecolor: '#7d7ff5',
         // 银白
-        titlcolor: '#f7f7ef'
+        titlcolor: '#f7f7ef',
+        // 紫蓝色
+        bordcolor: '#483d8b'
       }
     }
   },

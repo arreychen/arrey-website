@@ -1,23 +1,53 @@
+import styles from '../css/globals.module.scss';
 import Link from 'next/link';
-const NavBar = () => {
-  return (
-    <div className='w-full xl:h-28 h-20 flex justify-center items-center fixed z-50 '>
-      <nav className='xl:text-2xl md:text-xl flex gap-[2.7rem] navtitle '>
-        <Link href="/">
-          <a className='text-titlcolor hover:text-hover-navcolor'>HOME</a>
-        </Link>
-        <Link href="/works">
-          <a className='text-titlcolor hover:text-hover-navcolor'>WORKS</a>
-        </Link>
-        <Link href="/">
-          <a className='text-titlcolor hover:text-hover-navcolor'>BLOG</a>
-        </Link>
-        <Link href="/">
-          <a className='text-titlcolor hover:text-hover-navcolor'>WORUI</a>
-        </Link>
-      </nav>
-    </div>
-  );
+import React from 'react';
+type StateType = {
+  showBg:boolean
 };
+interface NavBar {
+  state: StateType;
+}
+class NavBar extends React.Component {
+  constructor(props:never) {
+    super(props);
+    this.state = {
+      showBg: true,
+    };
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.handleScroll);
+  }
+  handleScroll = () => {
+    if (window.scrollY>0.5 ) {
+      this.setState({showBg: false});
+    } else {
+      this.setState({showBg: true});
+    }
+  };
+  render() {
+    return (
+      <div className={`w-full xl:h-28 h-20 flex justify-center items-center fixed z-50 select-none ${this.state.showBg ? styles.navbghide: styles.navbg}`}>
+        <nav className={'xl:text-2xl md:text-xl flex gap-[2.7rem] navtitle ' }>
+          <Link href="/">
+            <a className='text-titlcolor hover:text-themecolor'>HOME</a>
+          </Link>
+          <Link href="/works">
+            <a className='text-titlcolor hover:text-themecolor'>WORKS</a>
+          </Link>
+          <Link href="/">
+            <a className='text-titlcolor hover:text-themecolor'>BLOG</a>
+          </Link>
+          <Link href="/">
+            <a className='text-titlcolor hover:text-themecolor'>WORUI</a>
+          </Link>
+        </nav>
+      </div>
+    );
+  }
+}
 
 export default NavBar;
