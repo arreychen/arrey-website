@@ -7,7 +7,7 @@ function MyApp({Component, pageProps}: AppProps) {
   const {locale} = useLocale();
   return (
     <SSRProvider>
-      <Provider locale={locale} theme={defaultTheme}>
+      <Provider locale={locale} theme={defaultTheme} colorScheme="dark" >
         <div className='relative min-h-screen'>
           <NavBar />
           <Component {...pageProps} />

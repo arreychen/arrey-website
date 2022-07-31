@@ -1,6 +1,5 @@
 import type {NextPage} from 'next';
 import Image from 'next/image';
-import styles from '../components/css/globals.module.scss';
 import faceImage1 from '../public/home/faceimage1.png';
 import {Well} from '@adobe/react-spectrum';
 
@@ -14,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
       <div className='w-full h-screen flex justify-center items-center relative'>
         <div className='flex items-end px-12 text-5xl h-96 xl:text-6xl xl:h-48 md:text-5xl md:h-40 titlemax z-10'>
-          <p className={styles.titlecol}>&rdquo; 80 percent of success is just showing up &rdquo;</p>
+          <p className='text-yellowcolor select-none'>&rdquo; 80 percent of success is just showing up &rdquo;</p>
         </div>
         <Image alt='face' src={faceImage1} layout="fill" priority={true} quality={50} objectFit="cover"/>
       </div>
