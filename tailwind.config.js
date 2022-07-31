@@ -11,7 +11,9 @@ module.exports = {
         // 紫蓝色
         bordcolor: '#483d8b',
         // 落日黄
-        yellowcolor: '#ffc05c'
+        yellowcolor: '#ffc05c',
+        // 暗蓝
+        bgcolor: '#1a1a26'
       }
     }
   },
