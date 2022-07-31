@@ -4,17 +4,37 @@ import HomeFooter from '../components/home/HomFooter';
 import NavBar from '../components/home/NavBar';
 import {SSRProvider, Provider, useLocale, defaultTheme} from '@adobe/react-spectrum';
 import Loading from '../components/Loading';
+import {useEffect, useState} from 'react';
+import {useRouter} from 'next/router';
 function MyApp({Component, pageProps}: AppProps) {
   const {locale} = useLocale();
+  const router = useRouter();
+  const [loading, setLoading]=useState(false);
+  useEffect(()=>{
+    const handleStart = (url: string) => (url !== router.asPath) && setLoading(true);
+    const handleComplete = (url: string) => (url === router.asPath) && setTimeout(() =>{
+      setLoading(false);
+    }, 1000);
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleComplete);
+    router.events.on('routeChangeError', handleComplete);
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleComplete);
+      router.events.off('routeChangeError', handleComplete);
+    };
+  });
   return (
     <SSRProvider>
       <Provider locale={locale} theme={defaultTheme} colorScheme="dark" >
-        <div className='relative min-h-screen'>
-          <Loading/>
-          <NavBar />
-          <Component {...pageProps} />
-          <HomeFooter />
-        </div>
+        {loading?<Loading/>:
+       (<div className='relative min-h-screen'>
+         <NavBar />
+         <Component {...pageProps} />
+         <HomeFooter />
+       </div>)}
       </Provider>
     </SSRProvider>
   );
