@@ -11,28 +11,27 @@ const HomeFooter = () =>{
             皖ICP备2021008083号
           </a>
         </p>
-        <p >&copy; 2022 ArreyChan, All rights reserved</p>
+        <p >&copy; 2022 Arrey Chan, All rights reserved</p>
         <DialogTrigger type="tray">
-
-          <ActionButton isQuiet>
+          <ActionButton isQuiet aria-label="Icon only">
             <Info />
-            More Info</ActionButton>
+          </ActionButton>
           <Dialog>
-            <Heading>关于网站</Heading>
+            <Heading><p className='cnfont'>关于网站</p></Heading>
             <Divider />
             <Content>
+              <p className='cnfont'>
               本网站由Cloudflare提供CDN加速服务<br />
-              本网站涉及到的原创艺术内容遵循
-              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank' rel='noreferrer'>
+              本网站涉及到的原创内容遵循
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank' rel='noreferrer' className='text-themecolor'>
               CC 4.0 BY-NC-SA
-              </a>版权协议<br />
+                </a>版权协议<br />
               首页图画师：清楚ノ囚人
+              </p>
             </Content>
           </Dialog>
         </DialogTrigger>
       </div>
-
-
     </Footer>
   );
 };
