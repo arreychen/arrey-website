@@ -26,7 +26,7 @@ const Home: NextPage = () => {
             width='100'
             height='100'
             quality={100}
-            className='rounded-full '
+            className='rounded-full select-none'
             priority={true}
           />
           <Well role="region" aria-labelledby="wellLabel">

@@ -22,7 +22,7 @@ class NavBar extends React.Component {
     document.removeEventListener('scroll', this.handleScroll);
   }
   handleScroll = () => {
-    if (window.scrollY>0.5 ) {
+    if (window.scrollY>2 ) {
       this.setState({showBg: false});
     } else {
       this.setState({showBg: true});

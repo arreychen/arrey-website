@@ -23,14 +23,16 @@ a {
 .titlemax {
   font-family: 'Bangers', cursive;
 }
-
+.cnfont {
+  font-family: 'ZCOOL XiaoWei', serif;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 /* 
 可用字体
 font-family: 'Bangers', cursive;
-font-family: 'Mr Dafoe', cursive;
+font-family: 'ZCOOL XiaoWei', serif;
 font-family: 'Hammersmith One', sans-serif;
 font-family: 'Noto Sans SC', sans-serif;
 */
