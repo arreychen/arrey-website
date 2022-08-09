@@ -10,6 +10,16 @@ function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
   const [loading, setLoading]=useState(false);
   useEffect(()=>{
+    if (typeof window !== 'undefined') {
+      const loader = document.querySelector('.globalLoader') as HTMLElement;
+      const bodys = document.querySelector('body')as HTMLElement;
+      setTimeout(() =>{
+        if (loader) {
+          loader.style.display = 'none';
+          bodys.style.overflow='auto';
+        }
+      }, 1000);
+    }
     const handleStart = (url: string) => (url !== router.asPath) && setLoading(true);
     const handleComplete = (url: string) => (url === router.asPath) && setTimeout(() =>{
       setLoading(false);
