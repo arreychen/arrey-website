@@ -16,6 +16,7 @@ function MyApp({Component, pageProps}: AppProps) {
     setTimeout(() =>{
       setFstloading(true);
     }, 1000);
+    console.log('你好陌生人，项目还在完善中，感谢Star这个项目！');
     const handleStart = (url: string) => (url !== router.asPath) && setLoading(true);
     const handleComplete = (url: string) => (url === router.asPath) && setTimeout(() =>{
       setLoading(false);
