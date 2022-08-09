@@ -26,6 +26,7 @@ a {
 .cnfont {
   font-family: 'ZCOOL XiaoWei', serif;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
