@@ -1,8 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default `
-body{
-    overflow: hidden;
-}
 .globalLoader{
     position: fixed;
     z-index: 1000;
