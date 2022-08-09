@@ -31,7 +31,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className={`w-full xl:h-28 h-20 flex justify-center items-center fixed z-40 select-none ${this.state.showBg ? styles.navbghide: styles.navbg}`}>
-        <nav className={'xl:text-2xl md:text-xl flex gap-[2.7rem] navtitle ' }>
+        <nav className={'2xl:text-3xl xl:text-2xl md:text-xl flex gap-[2.7rem] navtitle ' }>
           <Link href="/">
             <a className='text-titlcolor hover:text-themecolor'>HOME</a>
           </Link>

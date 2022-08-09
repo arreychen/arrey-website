@@ -6,22 +6,15 @@ import {SSRProvider, Provider, defaultTheme} from '@adobe/react-spectrum';
 import Loading from '../components/Loading';
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
+import Fstloading from '../components/Fstloading';
 function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
   const [loading, setLoading]=useState(false);
+  const [fstloading, setFstloading] = useState(false);
   useEffect(()=>{
-    const loader = document.querySelector('.globalLoader') as HTMLElement;
-    const bodys = document.querySelector('body')as HTMLElement;
-
-    if (document.readyState !== 'complete') {
-      bodys.style.overflow='hidden';
-      loader.style.visibility = 'visible';
-    } else {
-      setTimeout(() =>{
-        loader.style.display = 'none';
-        bodys.style.overflow='auto';
-      }, 1000);
-    }
+    setFstloading(
+        document.readyState === 'complete'
+    );
     const handleStart = (url: string) => (url !== router.asPath) && setLoading(true);
     const handleComplete = (url: string) => (url === router.asPath) && setTimeout(() =>{
       setLoading(false);
@@ -36,18 +29,21 @@ function MyApp({Component, pageProps}: AppProps) {
       router.events.off('routeChangeComplete', handleComplete);
       router.events.off('routeChangeError', handleComplete);
     };
-  });
+  }, [router.events, router.asPath]);
   return (
-    <SSRProvider>
-      <Provider locale={'en-US'} theme={defaultTheme} colorScheme="dark" >
-        {loading?<Loading/>:
+    <>
+      {fstloading ?
+      <SSRProvider>
+        <Provider locale={'en-US'} theme={defaultTheme} colorScheme="dark" >
+          {loading?<Loading/>:
        (<div className='relative min-h-screen'>
          <NavBar />
          <Component {...pageProps} />
          <HomeFooter />
        </div>)}
-      </Provider>
-    </SSRProvider>
+        </Provider>
+      </SSRProvider>:<Fstloading/>}
+    </>
   );
 }
 
