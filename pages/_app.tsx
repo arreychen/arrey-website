@@ -7,14 +7,15 @@ import Loading from '../components/Loading';
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 import Fstloading from '../components/Fstloading';
+
 function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
   const [loading, setLoading]=useState(false);
   const [fstloading, setFstloading] = useState(false);
   useEffect(()=>{
-    setFstloading(
-        document.readyState === 'complete'
-    );
+    setTimeout(() =>{
+      setFstloading(true);
+    }, 1000);
     const handleStart = (url: string) => (url !== router.asPath) && setLoading(true);
     const handleComplete = (url: string) => (url === router.asPath) && setTimeout(() =>{
       setLoading(false);
