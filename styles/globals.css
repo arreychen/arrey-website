@@ -26,7 +26,57 @@ a {
 .cnfont {
   font-family: 'ZCOOL XiaoWei', serif;
 }
+/* fstloading */
+.loader {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+}
 
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+.loader_bubble::before {
+  top: 0.7rem;
+  left: 0.7rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #f7f7ef;
+  border-radius: 50%;
+}
+
+.loader_bubble {
+  background-image: linear-gradient(-225deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: bubble 1200ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+          animation: bubble 1200ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg);
+  }
+}
+
+@keyframes bubble {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg);
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

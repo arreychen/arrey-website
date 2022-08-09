@@ -5,7 +5,7 @@ import Info from '@spectrum-icons/workflow/InfoOutline';
 const HomeFooter = () =>{
   return (
     <Footer >
-      <div className='w-full h-40 flex flex-col md:flex-row justify-center items-center  gap-[0.7rem] text-bordcolor font-bold select-none'>
+      <div className='w-full h-40 flex flex-col md:flex-row justify-center items-center  gap-[0.7rem] text-bordcolor font-bold select-none 2xl:text-lg'>
         <p>
           <a href='https://beian.miit.gov.cn/' target='_blank' rel='noreferrer'>
             皖ICP备2021008083号
