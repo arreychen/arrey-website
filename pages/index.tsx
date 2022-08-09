@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <title>(◍’౪`◍)ﾉﾞ~hi, buddy~</title>
       </Head>
       <div className='w-full h-screen flex justify-center items-center relative'>
-        <div className='flex items-end px-12 text-5xl h-96 2xl:text-8xl 2xl:h-72  md:text-5xl md:h-40 titlemax z-10'>
+        <div className='flex items-end px-12 text-5xl h-96 2xl:text-7xl 2xl:h-64  md:text-5xl md:h-40 titlemax z-10'>
           <p className='text-yellowcolor select-none'>&rdquo; 80 percent of success is just showing up &rdquo;</p>
         </div>
         <Image alt='face' src={faceImage1} layout="fill" priority={true} quality={100} objectFit="cover"/>
