@@ -1,6 +1,6 @@
 import type {NextPage} from 'next';
 import Image from 'next/image';
-import faceImage1 from '../public/home/faceimage1.png';
+import faceImage1 from '../public/home/faceimage1.jpg';
 import {Well} from '@adobe/react-spectrum';
 
 import Head from 'next/head';
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <div className='flex items-end px-12 text-5xl h-96 2xl:text-7xl 2xl:h-64  md:text-5xl md:h-40 titlemax z-10'>
           <p className='text-yellowcolor select-none'>&rdquo; 80 percent of success is just showing up &rdquo;</p>
         </div>
-        <Image alt='face' src={faceImage1} layout="fill" priority={true} quality={100} objectFit="cover"/>
+        <Image alt='face' src={faceImage1} layout="fill" priority={true} quality={100} loading='eager' objectFit="cover"/>
       </div>
 
       <div className='text-2xl text-titlcolor md:p-20 p-5'>
