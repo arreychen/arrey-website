@@ -13,11 +13,7 @@ a {
 }
 
 * {
-  /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing */
   box-sizing: border-box;
-}
-.bg1 {
-  background: url('../public/home/faceimage1.jpg') center no-repeat;
 }
 .navtitle {
   font-family: 'Hammersmith One', sans-serif;
