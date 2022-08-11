@@ -75,6 +75,28 @@ a {
     transform: translate3d(0, 0, 0) rotate(360deg);
   }
 }
+.opacityin {
+  -webkit-animation: in 0.5s cubic-bezier(0.27, -0.04, 0.91, 0.85) forwards;
+  animation: in 0.5s cubic-bezier(0.27, -0.04, 0.91, 0.85) forwards;
+}
+@-webkit-keyframes in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
