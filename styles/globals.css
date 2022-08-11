@@ -2,11 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #1a1a26; /* 深蓝 */
+  /* 暗蓝 */
+  background-color: #1a1a26;
   font-family: Noto Sans SC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -19,7 +19,7 @@ a {
   font-family: 'Hammersmith One', sans-serif;
 }
 .titlemax {
-  font-family: 'Bangers', cursive;
+  font-family: 'Mrs Sheppards', cursive;
 }
 .cnfont {
   font-family: 'ZCOOL XiaoWei', serif;
@@ -80,7 +80,7 @@ a {
 @tailwind utilities;
 /* 
 可用字体
-font-family: 'Bangers', cursive;
+font-family: 'Mrs Sheppards', cursive;
 font-family: 'ZCOOL XiaoWei', serif;
 font-family: 'Hammersmith One', sans-serif;
 font-family: 'Noto Sans SC', sans-serif;

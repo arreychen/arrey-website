@@ -1,23 +1,32 @@
 import type {NextPage} from 'next';
+import styles from '../components/css/globals.module.scss';
 import Image from 'next/image';
-import faceImage1 from '../public/home/faceimage1.jpg';
+import faceImage1 from '../public/home/faceimage.jpg';
 import {Well} from '@adobe/react-spectrum';
 import Head from 'next/head';
+import {useState} from 'react';
 const Home: NextPage = () => {
+  const [fontopacity, setFontopacity]=useState(false);
   return (
-
     <main className=' flex flex-col '>
       <Head>
         <title>(◍’౪`◍)ﾉﾞ~hi, buddy~</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
       </Head>
       <div className='w-full h-screen flex justify-center items-center relative'>
-        <div className='flex items-end px-12 text-5xl h-96 2xl:text-7xl 2xl:h-64  md:text-5xl md:h-40 titlemax z-10 '>
-          <p className='text-yellowcolor select-none'>&rdquo; 80 percent of success is just showing up &rdquo;</p>
+        <div className='flex items-end px-12
+        text-5xl h-96 md:h-40 lg:text-6xl xl:text-7xl xl:h-44 2xl:text-8xl 2xl:h-64
+        blur-sm titlemax z-10 '>
+          <p className={`text-yellowcolor select-none ${fontopacity ? styles.titfontact: styles.titfont}`}>
+            &ldquo; 80 percent of success is just showing up &rdquo;
+          </p>
         </div>
-        <Image alt='face' src={faceImage1} layout="fill" priority={true} placeholder="blur" quality={100} objectFit="cover"/>
+        <Image alt='face' src={faceImage1} layout="fill" priority objectFit="cover"
+          onLoadingComplete={()=>{
+            setFontopacity(true);
+          }}
+        />
       </div>
-
       <div className='text-2xl text-titlcolor md:p-20 p-5'>
         <div className=" rounded-xl navtitle ">
           <Image
@@ -26,8 +35,8 @@ const Home: NextPage = () => {
             width='100'
             height='100'
             quality={100}
+            priority
             className='rounded-full select-none'
-            priority={true}
           />
           <Well role="region" aria-labelledby="wellLabel">
             <p >Hi! My name is Arrey Chan.</p>
