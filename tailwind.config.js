@@ -11,11 +11,22 @@ module.exports = {
         // 紫蓝色
         bordcolor: '#483d8b',
         // 落日黄
-        yellowcolor: '#ffc05c',
+        yellowcolor: '#ffc061',
         // 暗蓝
-        bgcolor: '#1a1a26'
+        bgcolor: '#1a1a26',
+        // adobe-dark
+        adobedark: '#1e1e1e'
+      },
+      blur: {
+        sm: '0.5px'
+      },
+      transitionDuration: {
+        2000: '2000ms'
       }
     }
   },
-  plugins: [require('daisyui')]
+  corePlugins: {
+    aspectRatio: false
+  },
+  plugins: [require('@tailwindcss/aspect-ratio'), require('daisyui')]
 };

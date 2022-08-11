@@ -30,14 +30,14 @@ function MyApp({Component, pageProps}: AppProps) {
       router.events.off('routeChangeComplete', handleComplete);
       router.events.off('routeChangeError', handleComplete);
     };
-  }, [router.events, router.asPath]);
+  });
   return (
     <>
       {fstloading ?
       <SSRProvider>
         <Provider locale={'en-US'} theme={defaultTheme} colorScheme="dark" >
-          {loading?<Loading/>:
-       (<div className='relative min-h-screen'>
+          {loading?<Loading opachild={loading}/>:
+       (<div className='relative min-h-screen will-change-transform'>
          <NavBar />
          <Component {...pageProps} />
          <HomeFooter />

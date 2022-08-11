@@ -18,11 +18,11 @@ class MyDocument extends Document {
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="anonymous"/>
           <link
-            href='https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Bangers&family=Hammersmith+One&family=ZCOOL+XiaoWei&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Mrs+Sheppards&family=Hammersmith+One&family=ZCOOL+XiaoWei&display=swap'
             rel='stylesheet'
           />
         </Head>
-        <body >
+        <body>
           <Main />
           <NextScript />
         </body>
