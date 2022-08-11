@@ -37,7 +37,7 @@ function MyApp({Component, pageProps}: AppProps) {
       <SSRProvider>
         <Provider locale={'en-US'} theme={defaultTheme} colorScheme="dark" >
           {loading?<Loading opachild={loading}/>:
-       (<div className='relative min-h-screen will-change-transform'>
+       (<div className='relative min-h-screen opacityin'>
          <NavBar />
          <Component {...pageProps} />
          <HomeFooter />

@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <div className='w-full h-screen flex justify-center items-center relative'>
         <div className='flex items-end px-12
-        text-5xl h-96 md:h-40 lg:text-6xl xl:text-7xl xl:h-44 2xl:text-8xl 2xl:h-64
+        text-5xl h-96 md:h-40 lg:text-6xl xl:text-7xl xl:h-44 2xl:text-8xl 2xl:h-64 2xl:blur-0
         blur-sm titlemax z-10 '>
           <p className={`text-yellowcolor select-none ${fontopacity ? styles.titfontact: styles.titfont}`}>
             &ldquo; 80 percent of success is just showing up &rdquo;
