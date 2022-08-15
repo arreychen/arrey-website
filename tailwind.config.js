@@ -20,8 +20,12 @@ module.exports = {
       blur: {
         sm: '0.5px'
       },
-      transitionDuration: {
-        2000: '2000ms'
+      screens: {
+        sm: '620px',
+        '2xl': '2048px'
+      },
+      fontSize: {
+        '4xl': '2.5rem'
       }
     }
   },
