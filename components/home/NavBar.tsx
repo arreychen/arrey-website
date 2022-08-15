@@ -38,7 +38,7 @@ class NavBar extends React.Component {
           <Link href="/works" >
             <a className='text-titlcolor hover:text-themecolor'>WORKS</a>
           </Link>
-          <Link href="/">
+          <Link href="https://errui.blog.csdn.net/">
             <a className='text-titlcolor hover:text-themecolor'>BLOG</a>
           </Link>
           <Link href="/">
