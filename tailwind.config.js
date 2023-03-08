@@ -15,22 +15,22 @@ module.exports = {
         // 暗蓝
         bgcolor: '#1a1a26',
         // adobe-dark
-        adobedark: '#1e1e1e'
+        adobedark: '#1e1e1e',
       },
       blur: {
-        sm: '0.5px'
+        sm: '0.5px',
       },
       screens: {
-        sm: '620px',
-        '2xl': '2048px'
+        'sm': '620px',
+        '2xl': '2048px',
       },
       fontSize: {
-        '4xl': '2.5rem'
-      }
-    }
+        '4xl': '2.5rem',
+      },
+    },
   },
   corePlugins: {
-    aspectRatio: false
+    aspectRatio: false,
   },
-  plugins: [require('@tailwindcss/aspect-ratio'), require('daisyui')]
+  plugins: [require('@tailwindcss/aspect-ratio'), require('daisyui')],
 };
