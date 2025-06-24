@@ -56,9 +56,10 @@ yarn start
 
 Feel free to open an issue if you have question or found a bug.
 
+Update 2025
+
 # License
 
 - Licensed under the GPL-3.0 License, Copyright © 2022. See [LICENSE](./License) for more information.
 - The images and video works involved in this project is licensed under the [CC 4.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
 
