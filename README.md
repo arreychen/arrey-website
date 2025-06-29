@@ -23,7 +23,7 @@ git clone git@github.com:arreychan/arrey-website.git
 
 cd arrey-website
 
-yarn install
+yarn install    
 ```
 
 Then, you can run locally in development mode with live reload:
