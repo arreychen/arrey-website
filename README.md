@@ -46,11 +46,16 @@ yarn start
 # Features
 
 - [x] homepage 
+
 - [x] mobile adaptation 
+
 - [ ] backend management system base on golang
+
 - [ ] markdown file support 
+
 - [ ] page about Blog
-- [ ] page about WORUI
+
+  
 
 # Contributions
 
