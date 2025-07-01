@@ -53,9 +53,8 @@ yarn start
 
 - [ ] markdown file support 
 
-- [ ] page about Blog
-
   
+
 
 # Contributions
 
