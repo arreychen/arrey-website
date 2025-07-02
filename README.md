@@ -51,9 +51,8 @@ yarn start
 
 - [ ] backend management system base on golang
 
-- [ ] markdown file support 
-
   
+
 
 
 # Contributions
