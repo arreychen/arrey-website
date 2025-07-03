@@ -49,10 +49,7 @@ yarn start
 
 - [x] mobile adaptation 
 
-- [ ] backend management system base on golang
-
   
-
 
 
 # Contributions
