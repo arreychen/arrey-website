@@ -47,10 +47,6 @@ yarn start
 
 - [x] homepage 
 
-- [x] mobile adaptation 
-
-  
-
 
 # Contributions
 
