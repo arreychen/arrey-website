@@ -45,7 +45,7 @@ yarn start
 
 # Features
 
-- [x] homepage     aaaa
+
 
 
 # Contributions
