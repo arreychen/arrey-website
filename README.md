@@ -45,8 +45,6 @@ yarn start
 
 # Features
 
-ssssssss
-
 
 
 
